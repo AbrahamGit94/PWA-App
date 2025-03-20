@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+    useEffect(() => {
+    const messageHandler = (event: MessageEvent) => {
+      var port = event.ports[0];
+      if (typeof port === 'undefined') return;
+      port.postMessage("Test");
+      port.onmessage = function(event) {
+        console.log("[PostMessage1] Got message: " + event.data);
+      };
+    };
+
+    window.addEventListener("message", messageHandler);
+
+    return () => {
+      window.removeEventListener("message", messageHandler);
+    };
+  }, []); // Empty dependency array means this effect runs only once on mount
   return (
     <div className="App">
       <header className="App-header">
