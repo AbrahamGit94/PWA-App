@@ -19,7 +19,7 @@ function App() {
       }
       port.postMessage("Sending test meassage from webapp");
       port.onmessage = function(event) {
-        console.log("[PostMessage1] Got message: " + I have received a message from mobile app + event.data);
+        console.log("[PostMessage1] Got message: " + "I have received a message from mobile app" + event.data);
       };
     };
 
