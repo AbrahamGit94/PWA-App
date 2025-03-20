@@ -5,6 +5,12 @@ import './App.css';
 function App() {
     useEffect(() => {
         console.log("inside useeffect");
+     window.addEventListener("message", messageHandler);
+
+    return () => {
+      window.removeEventListener("message", messageHandler);
+    };
+  }, []); // Empty dependency array means this effect runs only once on mount
     const messageHandler = (event: MessageEvent) => {
       var port = event.ports[0];
       if (typeof port === 'undefined') {
@@ -17,12 +23,6 @@ function App() {
       };
     };
 
-    window.addEventListener("message", messageHandler);
-
-    return () => {
-      window.removeEventListener("message", messageHandler);
-    };
-  }, []); // Empty dependency array means this effect runs only once on mount
   return (
     <div className="App">
       <header className="App-header">
