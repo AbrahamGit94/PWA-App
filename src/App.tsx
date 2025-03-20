@@ -4,9 +4,13 @@ import './App.css';
 
 function App() {
     useEffect(() => {
+        console.log("inside useeffect");
     const messageHandler = (event: MessageEvent) => {
       var port = event.ports[0];
-      if (typeof port === 'undefined') return;
+      if (typeof port === 'undefined') {
+          console.log("port undefined");
+          return;
+      }
       port.postMessage("Test");
       port.onmessage = function(event) {
         console.log("[PostMessage1] Got message: " + event.data);
