@@ -23,6 +23,14 @@ function App() {
       };
     };
 
+    const goToPWA = () => {
+        window.location.href = "https://pwapushnew.dev-public.bbpd.io";
+    };
+
+    const goToPWA2 = () => {
+        window.location.href = "https://pwapushtestassetlink.dev-public.bbpd.io";
+    };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -30,6 +38,8 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+          <button onClick={goToPWA}>Go to PWA</button>;
+          <button onClick={goToPWA2}>Go to PWA2</button>;
         <a
           className="App-link"
           href="https://reactjs.org"
