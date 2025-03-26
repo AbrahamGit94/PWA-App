@@ -1,50 +1,50 @@
 [
-    {
-        "relation": [
-            "delegate_permission/common.handle_all_urls"
-        ],
-        "target": {
-            "namespace": "android_app",
-            "package_name": "com.blackboard.android.bbstudentlite",
-            "sha256_cert_fingerprints": [
-                "95:17:EB:D1:55:DB:B6:5B:4B:14:F9:88:D7:B2:EE:C5:49:45:3F:B7:A3:89:41:A8:4A:99:D9:AD:1E:C8:50:50"
-            ]
-        }
-    },
-    {
-        "relation": [
-            "delegate_permission/common.handle_all_urls"
-        ],
-        "target": {
-            "namespace": "android_app",
-            "package_name": "com.twa.example",
-            "sha256_cert_fingerprints": [
-                "74:98:D8:F0:12:F5:72:EE:36:F2:E3:87:20:51:B5:40:3A:04:8A:FA:AE:07:37:8A:70:9F:B2:FA:CB:61:94:A5"
-            ]
-        }
-    },
-    {
-        "relation": [
-            "delegate_permission/common.use_as_origin"
-        ],
-        "target": {
-            "namespace": "android_app",
-            "package_name": "com.blackboard.android.bbstudentlite",
-            "sha256_cert_fingerprints": [
-                "95:17:EB:D1:55:DB:B6:5B:4B:14:F9:88:D7:B2:EE:C5:49:45:3F:B7:A3:89:41:A8:4A:99:D9:AD:1E:C8:50:50"
-            ]
-        }
-    },
-    {
-        "relation": [
-            "delegate_permission/common.use_as_origin"
-        ],
-        "target": {
-            "namespace": "android_app",
-            "package_name": "com.twa.example",
-            "sha256_cert_fingerprints": [
-                "74:98:D8:F0:12:F5:72:EE:36:F2:E3:87:20:51:B5:40:3A:04:8A:FA:AE:07:37:8A:70:9F:B2:FA:CB:61:94:A5"
-            ]
-        }
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.blackboard.android.bbstudent",
+      "sha256_cert_fingerprints": [
+        "A4:2C:18:0E:8B:C5:CC:F5:F8:E7:A9:AD:E8:1B:E8:59:24:62:B2:02:78:21:0F:B8:71:4B:69:94:1B:64:5E:B1"
+      ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.twa.example",
+      "sha256_cert_fingerprints": [
+        "74:98:D8:F0:12:F5:72:EE:36:F2:E3:87:20:51:B5:40:3A:04:8A:FA:AE:07:37:8A:70:9F:B2:FA:CB:61:94:A5"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.use_as_origin"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.blackboard.android.bbstudent",
+      "sha256_cert_fingerprints": [
+        "A4:2C:18:0E:8B:C5:CC:F5:F8:E7:A9:AD:E8:1B:E8:59:24:62:B2:02:78:21:0F:B8:71:4B:69:94:1B:64:5E:B1"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.use_as_origin"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.twa.example",
+      "sha256_cert_fingerprints": [
+        "74:98:D8:F0:12:F5:72:EE:36:F2:E3:87:20:51:B5:40:3A:04:8A:FA:AE:07:37:8A:70:9F:B2:FA:CB:61:94:A5"
+      ]
+    }
+  }
 ]
