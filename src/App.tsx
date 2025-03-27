@@ -23,6 +23,16 @@ function App() {
       };
     };
 
+    window.addEventListener("message", (event) => {
+        console.log("origin " + event.origin);
+        console.log("ports " + event.ports[0]);
+        //if (event.origin !== "https://your-pwa-url.com") return; // Replace with your domain
+        console.log("Message from Android:", event.data);
+    
+        // Send response back to Android
+        event.source.postMessage("Hello from PWA!", event.origin);
+    });
+
     const goToPWA = () => {
         window.location.href = "https://pwapushnew.dev-public.bbpd.io";
     };
