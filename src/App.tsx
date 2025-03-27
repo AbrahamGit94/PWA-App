@@ -24,6 +24,7 @@ function App() {
     };
 
     window.addEventListener("message", (event) => {
+        console.log("inside addEventListener");
         console.log("origin " + event.origin);
         console.log("ports " + event.ports[0]);
         //if (event.origin !== "https://your-pwa-url.com") return; // Replace with your domain
