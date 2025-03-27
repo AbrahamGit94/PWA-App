@@ -30,7 +30,11 @@ function App() {
         console.log("Message from Android:", event.data);
     
         // Send response back to Android
-        event.source.postMessage("Hello from PWA!", event.origin);
+        if (event.source) {
+            event.source.postMessage("Hello from PWA!", { targetOrigin: event.origin });
+        } else {
+            console.error("event.source is null");
+        }
     });
 
     const goToPWA = () => {
