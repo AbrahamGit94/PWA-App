@@ -55,7 +55,7 @@ function App() {
             {loading ? (
                 <div>
                     <iframe
-                        src="https://velvety-basbousa-a38cb9.netlify.app"
+                        src="https://samplepwaapp.netlify.app/"
                         width="100%"
                         height="100%"
                         title="Blackboard PWA"
