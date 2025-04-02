@@ -56,7 +56,7 @@ function App() {
             {loading ? (
                 <div>
                     <iframe
-                        src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                        src="https://conasems-ava-prod.s3.sa-east-1.amazonaws.com/aulas/ava/dummy-1641923583.pdf"
                         width="100%"
                         height="100%"
                         title="Blackboard PWA"
