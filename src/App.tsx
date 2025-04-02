@@ -56,7 +56,7 @@ function App() {
             {loading ? (
                 <div>
                     <iframe
-                        src="https://conasems-ava-prod.s3.sa-east-1.amazonaws.com/aulas/ava/dummy-1641923583.pdf"
+                        src="https://velvety-basbousa-a38cb9.netlify.app"
                         width="100%"
                         height="100%"
                         title="Blackboard PWA"
