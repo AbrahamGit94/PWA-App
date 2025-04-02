@@ -48,6 +48,7 @@ function App() {
     const goToPWA2 = () => {
         setLoading(false);
         //window.location.href = "https://pwapushtestassetlink.dev-public.bbpd.io";
+        //src="https://velvety-basbousa-a38cb9.netlify.app/"
     };
 
     return (
@@ -55,7 +56,7 @@ function App() {
             {loading ? (
                 <div>
                     <iframe
-                        src="https://velvety-basbousa-a38cb9.netlify.app/"
+                        src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
                         width="100%"
                         height="100%"
                         title="Blackboard PWA"
