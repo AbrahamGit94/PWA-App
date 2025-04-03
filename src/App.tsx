@@ -55,7 +55,7 @@ function App() {
             {loading ? (
                 <div>
                     <iframe
-                        src="https://mobile-pwa-one.dev-public.bbpd.io/ultra"
+                        src="https://pwa-iframe.dev-public.bbpd.io"
                         width="100%"
                         height="100%"
                         title="Blackboard PWA"
