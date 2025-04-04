@@ -59,6 +59,7 @@ function App() {
                         width="100%"
                         height="100%"
                         title="Blackboard PWA"
+                        allow="cross-origin"
                     ></iframe>
                 </div>
             ) : (
