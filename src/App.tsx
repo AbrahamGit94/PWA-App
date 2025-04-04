@@ -55,7 +55,7 @@ function App() {
             {loading ? (
                 <div>
                     <iframe
-                        src="https://pwa-iframe.dev-public.bbpd.io"
+                        src="https://mylearn.int.bbpd.io/"
                         width="100%"
                         height="100%"
                         title="Blackboard PWA"
