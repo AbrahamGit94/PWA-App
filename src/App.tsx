@@ -56,7 +56,6 @@ function App() {
                 <div>
                     <iframe
                         src="https://pwa-iframe.dev-public.bbpd.io"
-                        sandbox="allow-same-site-none-cookies allow-scripts allow-same-origin"
                         width="100%"
                         height="100%"
                         title="Blackboard PWA"
