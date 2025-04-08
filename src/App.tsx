@@ -55,7 +55,7 @@ function App() {
             {loading ? (
                 <div>
                     <iframe
-                        src="https://pwa-push-notification-android.dev-public.bbpd.io/"
+                        src="https://pwa-push-notification-android.dev-public.bbpd.io/ultra"
                         width="100%"
                         height="100%"
                         title="Blackboard PWA"
