@@ -27,6 +27,11 @@ app.use('/:domain/*', (req, res, next) => {
         changeOrigin: true,
         pathRewrite: { [`^/${requestedDomain}`]: '' },
         onProxyReq: (proxyReq, req, res) => {
+            // Set dynamic Referer header
+            const refererHeader = `https://${requestedDomain}`;
+            proxyReq.setHeader('Referer', refererHeader);
+
+            // Optional: Set Host header too
             proxyReq.setHeader('Host', requestedDomain);
         }
     })(req, res, next);
