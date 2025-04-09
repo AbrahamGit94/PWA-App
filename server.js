@@ -65,7 +65,10 @@ app.use('/:domain(*)', (req, res, next) => {
     createProxyMiddleware({
         target: targetUrl,
         changeOrigin: true,
-        pathRewrite: () => '/' + subPath,
+        //pathRewrite: () => '/' + subPath,
+        pathRewrite: {
+            [`^/${domain}`]: '' // Strip the domain from URL when forwarding to target
+        },
         onProxyReq: (proxyReq) => {
             proxyReq.setHeader('Referer', targetUrl + '/' + subPath);
             proxyReq.setHeader('Host', domain);
