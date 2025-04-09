@@ -24,7 +24,7 @@
     <title>TWA APP</title>
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js').then(() => {
+        navigator.serviceWorker.register('/service-worker.ts').then(() => {
           console.log("✅ Service worker registered");
         });
       }

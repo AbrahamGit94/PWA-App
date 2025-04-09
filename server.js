@@ -58,6 +58,9 @@ app.use('/:domain(*)', (req, res, next) => {
     const subPath = parts.join('/');
     const targetUrl = `https://${domain}`;
     const prefix = `/${domain}`;
+    console.log("Domain:", domain);
+    console.log("Rewriting path:", '/' + subPath);
+    console.log("Proxying to:", targetUrl + '/' + subPath);
 
     createProxyMiddleware({
         target: targetUrl,
