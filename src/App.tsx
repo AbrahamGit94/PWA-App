@@ -46,8 +46,7 @@ function App() {
 
     const goToPWA2 = () => {
         setLoading(false);
-        //window.location.href = "https://pwapushtestassetlink.dev-public.bbpd.io";
-        //src="https://velvety-basbousa-a38cb9.netlify.app/"
+        window.location.href = "http://localhost:3000/pwa-push-notification-android.dev-public.bbpd.io/index.html";
     };
 
     return (
@@ -55,7 +54,7 @@ function App() {
             {loading ? (
                 <div>
                     <iframe
-                        src="https://pwa-push-notification-android.dev-public.bbpd.io/ultra"
+                        src="https://pwa-push-notification-android.dev-public.bbpd.io/"
                         width="100%"
                         height="100%"
                         title="Blackboard PWA"

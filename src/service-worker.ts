@@ -77,4 +77,31 @@ self.addEventListener('message', (event) => {
   }
 });
 
+self.addEventListener('install', (event) => {
+    console.log('[Service Worker] Installing...');
+    event.waitUntil(self.skipWaiting());
+});
+
+self.addEventListener('activate', (event) => {
+    console.log('[Service Worker] Activating...');
+    event.waitUntil(self.clients.claim());
+});
+
+self.addEventListener('fetch', (event) => {
+    const url = new URL(event.request.url);
+    if (url.origin.includes("")) {
+        // Intercept and cache as needed
+        event.respondWith(
+            caches.match(event.request).then(response => {
+                return response || fetch(event.request).then(networkResponse => {
+                    return caches.open('dynamic-cache').then(cache => {
+                        cache.put(event.request, networkResponse.clone());
+                        return networkResponse;
+                    });
+                });
+            })
+        );
+    }
+});
+
 // Any other custom service worker logic can go here.
