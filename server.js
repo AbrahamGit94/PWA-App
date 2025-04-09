@@ -3,11 +3,13 @@ const { createProxyMiddleware, responseInterceptor} = require('http-proxy-middle
 const cors = require('cors');
 
 const app = express();
-const path = require('path');
 const PORT = process.env.PORT || 3000;
 
 // Allow cross-origin if needed (especially for service workers)
-app.use(cors());
+app.use(cors({
+    origin: '*', // Allow all origins (adjust as needed for security)
+    credentials: true
+}));
 app.use(express.static('public'));
 
 // Route pattern: /abc.com/some/path → proxies to https://abc.com/some/path
@@ -61,6 +63,10 @@ app.use('/:domain(*)', (req, res, next) => {
         target: targetUrl,
         changeOrigin: true,
         pathRewrite: () => '/' + subPath,
+        onProxyReq: (proxyReq) => {
+            proxyReq.setHeader('Referer', targetUrl + '/' + subPath);
+            proxyReq.setHeader('Host', domain);
+        },
         selfHandleResponse: true, // Required for intercepting response
         onProxyRes: responseInterceptor(async (responseBuffer, proxyRes, req, res) => {
             const contentType = proxyRes.headers['content-type'] || '';
