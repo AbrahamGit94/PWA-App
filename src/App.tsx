@@ -3,50 +3,13 @@ import './App.css';
 
 function App() {
     const [loading, setLoading] = useState(false);
-    /*useEffect(() => {
-        console.log("inside useeffect");
-        window.addEventListener("message", messageHandler);
-
-        return () => {
-            window.removeEventListener("message", messageHandler);
-        };
-    }, []); // Empty dependency array means this effect runs only once on mount
-    const messageHandler = (event: MessageEvent) => {
-        var port = event.ports[0];
-        console.log("ports old " + port);
-        if (typeof port === 'undefined') {
-            console.log("port undefined");
-            return;
-        }
-        port.postMessage("Sending test message from webapp");
-        port.onmessage = function (event) {
-            console.log("[PostMessage1] Got message: I have received a message from mobile app" + event.data);
-        };
-    };
-
-    window.addEventListener("message", (event) => {
-        console.log("inside addEventListener");
-        console.log("origin " + event.origin);
-        console.log("ports " + event.ports[0]);
-        //if (event.origin !== "https://your-pwa-url.com") return; // Replace with your domain
-        console.log("Message from Android:", event.data);
-
-        // Send response back to Android
-        if (event.source) {
-            event.source.postMessage("Hello from PWA!", {targetOrigin: event.origin});
-        } else {
-            console.error("event.source is null");
-        }
-    });*/
 
     const goToPWA = () => {
         setLoading(true);
-        //window.location.href = "https://pwapushnew.dev-public.bbpd.io";
     };
 
     const goToPWA2 = () => {
         setLoading(false);
-        window.location.href = "http://localhost:3000/pwa-push-notification-android.dev-public.bbpd.io/index.html";
     };
 
     return (
@@ -54,7 +17,7 @@ function App() {
             {loading ? (
                 <div>
                     <iframe
-                        src="https://pwa-push-notification-android.dev-public.bbpd.io/"
+                        src="https://mylearn.int.bbpd.io/"
                         width="100%"
                         height="100%"
                         title="Blackboard PWA"
