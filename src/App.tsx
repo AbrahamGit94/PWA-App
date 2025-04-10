@@ -17,7 +17,7 @@ function App() {
             {loading ? (
                 <div>
                     <iframe
-                        src="https://mylearn.int.bbpd.io/"
+                        src="https://sampleapp-rho.vercel.app/"
                         width="100%"
                         height="100%"
                         title="Blackboard PWA"
