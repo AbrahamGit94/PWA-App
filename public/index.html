@@ -21,10 +21,11 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <base href="/pwa-mdr.dev-public.bbpd.io/">
     <title>TWA APP</title>
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.ts').then(() => {
+        navigator.serviceWorker.register('/service-worker.js').then(() => {
           console.log("✅ Service worker registered");
         });
       }
